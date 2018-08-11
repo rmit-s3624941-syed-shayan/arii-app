@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Image } from "react-native";
+import { Image, TextInput } from "react-native";
 import { connect } from "react-redux";
 import {
   Container,
@@ -16,6 +16,8 @@ import { setUser } from "../../actions/user";
 import styles from "./styles";
 var loginmessage = "Enter email and password to Sign In";
 const background = require("../../../images/shadow.png");
+const mailLogo = require("../../../images/mailLogo.png");
+const pwLogo = require("../../../images/pwLogo.png");
 const validate = values => {
   const error = {};
   error.email = "";
@@ -96,8 +98,23 @@ class Login extends Component {
               <Text style={styles.msg}>ENTER USERNAME AND PASSWORD</Text>
               </View>
               <View style={{marginTop: 10}}>
-                <Field name="email"  component={this.renderInput}/>
-                <Field name="password" component={this.renderInput} />
+              <View style={styles.inputContainer}>
+        <Image style={styles.inputIcon} source={mailLogo}/>
+        <TextInput style={styles.inputs}
+            placeholder="Email"
+            keyboardType="email-address"
+            underlineColorAndroid='transparent'
+            onChangeText={(email) => this.setState({email})}/>
+      </View>
+
+      <View style={styles.inputContainer}>
+        <Image style={styles.inputIcon} source={pwLogo}/>
+        <TextInput style={styles.inputs}
+            placeholder="Password"
+            secureTextEntry={true}
+            underlineColorAndroid='transparent'
+            onChangeText={(password) => this.setState({password})}/>
+      </View>
                 <Button style={styles.btn} onPress={() => this.props.navigation.navigate("Home")}>
                   <Text style={styles.btnMsg}>Login</Text>
                 </Button>

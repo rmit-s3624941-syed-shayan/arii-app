@@ -63,5 +63,30 @@ export default {
     width: 350,
     padding: 2,
     marginTop: -60,
-  }
+  },
+  inputContainer: {
+      borderBottomColor: '#F5FCFF',
+      backgroundColor: '#FFFFFF',
+      borderRadius:0,
+      borderBottomWidth: 1,
+      width: 300,
+      height:45,
+      alignSelf: 'center',
+      marginBottom:20,
+      flexDirection: 'row',
+      alignItems:'center'
+  },
+  inputs:{
+      height:45,
+      marginLeft:16,
+      fontSize: 20,
+      borderBottomColor: '#FFFFFF',
+      flex:1,
+  },
+  inputIcon:{
+    width:30,
+    height:30,
+    marginLeft:15,
+    justifyContent: 'center'
+  },
 };
