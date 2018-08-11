@@ -58,7 +58,7 @@ class BlankPage2 extends Component {
         </View>
         <View  style={styles.bg}>
             <Text style={styles.textStyle}>
-              SIGNUP AS A:
+              SIGNUP AS A :
             </Text>
             {this.renderButton("TENANT")}
             {this.renderButton("PROPERTY MANAGER")}
