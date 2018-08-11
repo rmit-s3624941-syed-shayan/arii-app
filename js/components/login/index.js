@@ -101,7 +101,7 @@ class Login extends Component {
                 <Button style={styles.btn} onPress={() => this.props.navigation.navigate("Home")}>
                   <Text style={styles.btnMsg}>Login</Text>
                 </Button>
-                <Button style={styles.btnReg} onPress={() => this.props.navigation.navigate("Home")}>
+                <Button style={styles.btnReg} onPress={() => this.props.navigation.navigate("signUp")}>
                   <Text style={styles.btnMsg}>Register</Text>
                 </Button>
                 </View>
