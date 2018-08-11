@@ -12,7 +12,7 @@ export default {
     bottom: 0,
     left: 0,
     right: 0,
-    backgroundColor: '#FBFAFA',
+    backgroundColor: 'black',
   },
   shadow: {
     flex: 1,
@@ -21,7 +21,7 @@ export default {
   },
   bg: {
     flex: 1,
-    marginTop: deviceHeight / 1.75,
+    marginTop: 300,
     paddingTop: 20,
     paddingLeft: 10,
     paddingRight: 10,
@@ -32,7 +32,36 @@ export default {
     marginBottom: 20,
   },
   btn: {
+    width: 300,
+    justifyContent: 'center',
+    marginTop: 40,
+    alignSelf: 'center',
+    backgroundColor: "#38d0d0" ,
+  },
+  btnReg: {
+    width: 300,
+    justifyContent: 'center',
     marginTop: 20,
     alignSelf: 'center',
+    backgroundColor: "#38d0d0" ,
   },
+  msg: {
+    color: 'white',
+    alignSelf: 'center',
+    fontSize: 20,
+    fontWeight: 'bold',
+  },
+  btnMsg: {
+    color: 'black',
+    alignSelf: 'center',
+    fontSize: 20,
+    fontWeight: 'bold',
+  },
+  box: {
+    alignSelf: 'center',
+    backgroundColor: 'black',
+    width: 350,
+    padding: 2,
+    marginTop: -60,
+  }
 };

@@ -14,9 +14,8 @@ import {
 import { Field, reduxForm } from "redux-form";
 import { setUser } from "../../actions/user";
 import styles from "./styles";
-
+var loginmessage = "Enter email and password to Sign In";
 const background = require("../../../images/shadow.png");
-
 const validate = values => {
   const error = {};
   error.email = "";
@@ -93,14 +92,19 @@ class Login extends Component {
           <Content>
             <Image source={background} style={styles.shadow}>
               <View style={styles.bg}>
-                <Field name="email" component={this.renderInput} />
+              <View style={styles.box}>
+              <Text style={styles.msg}>ENTER USERNAME AND PASSWORD</Text>
+              </View>
+              <View style={{marginTop: 10}}>
+                <Field name="email"  component={this.renderInput}/>
                 <Field name="password" component={this.renderInput} />
-                <Button
-                  style={styles.btn}
-                  onPress={() => this.props.navigation.navigate("Home")}
-                >
-                  <Text>Login</Text>
+                <Button style={styles.btn} onPress={() => this.props.navigation.navigate("Home")}>
+                  <Text style={styles.btnMsg}>Login</Text>
                 </Button>
+                <Button style={styles.btnReg} onPress={() => this.props.navigation.navigate("Home")}>
+                  <Text style={styles.btnMsg}>Register</Text>
+                </Button>
+                </View>
               </View>
             </Image>
           </Content>
