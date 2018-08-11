@@ -40,7 +40,7 @@ export default {
     fontSize: 18,
     fontWeight: 'bold',
   },
-  btnTxt: {
+  btnTxt: { 
     fontSize: 20,
     fontWeight: 'bold',
     color: 'black',
