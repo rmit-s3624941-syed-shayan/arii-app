@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { TouchableOpacity } from "react-native";
 import { connect } from "react-redux";
-import BlankPage2 from "../blankPage2";
+import signUp from "../signUp";
 import DrawBar from "../DrawBar";
 import { DrawerNavigator, NavigationActions } from "react-navigation";
 import {
@@ -111,7 +111,7 @@ const HomeSwagger = connect(mapStateToProps, bindAction)(Home);
 const DrawNav = DrawerNavigator(
   {
     Home: { screen: HomeSwagger },
-    BlankPage2: { screen: BlankPage2 }
+    signUp: { screen: signUp }
   },
   {
     contentComponent: props => <DrawBar {...props} />
