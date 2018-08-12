@@ -1,4 +1,4 @@
-package com.nativestarterkit;
+package com.ariiAppAndroid;
 
 import com.facebook.react.ReactActivity;
 
