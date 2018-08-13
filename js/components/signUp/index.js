@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Image } from "react-native";
+import { Image, TextInput } from "react-native";
 import { connect } from "react-redux";
 import {
   Container,
@@ -48,7 +48,7 @@ class BlankPage2 extends Component {
         </Header>
 
         <Content padder style={styles.container}>
-        
+
         <View style={{flex: 1, alignItems: 'center', marginTop:10}}>
         <Image
           style={{flex: 1,
@@ -64,7 +64,7 @@ class BlankPage2 extends Component {
             {this.renderButton("PROPERTY MANAGER")}
             {this.renderButton("PROPERTY OWNER")}
             {this.renderButton("TRADE")}
-          
+
         </View>
         </Content>
       </Container>

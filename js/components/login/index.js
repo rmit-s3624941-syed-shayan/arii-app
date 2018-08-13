@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Image, TextInput } from "react-native";
+import tennant from "../tennant";
 import { connect } from "react-redux";
 import {
   Container,
@@ -14,7 +15,6 @@ import {
 import { Field, reduxForm } from "redux-form";
 import { setUser } from "../../actions/user";
 import styles from "./styles";
-var loginmessage = "Enter email and password to Sign In";
 const background = require("../../../images/shadow.png");
 const mailLogo = require("../../../images/mailLogo.png");
 const pwLogo = require("../../../images/pwLogo.png");
@@ -115,10 +115,10 @@ class Login extends Component {
             underlineColorAndroid='transparent'
             onChangeText={(password) => this.setState({password})}/>
       </View>
-                <Button style={styles.btn} onPress={() => this.props.navigation.navigate("Home")}>
+                <Button style={styles.btn} onPress={() => loginUser(this)}>
                   <Text style={styles.btnMsg}>Login</Text>
                 </Button>
-                <Button style={styles.btnReg} onPress={() => this.props.navigation.navigate("signUp")}>
+                <Button style={styles.btnReg} onPress={() => SignUpUser(this)}>
                   <Text style={styles.btnMsg}>Register</Text>
                 </Button>
                 </View>
@@ -130,6 +130,16 @@ class Login extends Component {
     );
   }
 }
+function loginUser(t) {
+  console.log(t.state);
+  t.props.navigation.navigate("tennant");
+
+};
+function SignUpUser(t) {
+  console.log(t.state);
+  t.props.navigation.navigate("signUp");
+
+};
 const LoginSwag = reduxForm(
   {
     form: "test",
